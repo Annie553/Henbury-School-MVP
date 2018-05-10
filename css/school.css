@@ -1,0 +1,87 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+ul{
+  list-style-type: none;
+}
+
+body{
+  background-color: white;
+  font-family: 'Lato', sans-serif;
+}
+.navigation{
+  max-width: 500px;
+  width:90%;
+  background-color:#385077;
+  border-radius: 4px;
+  margin:20px auto 0;
+}
+
+.level_one_menu{
+  display: flex;
+  flex-direction: column;
+}
+
+.level_one_menu a{
+  display: block;
+  text-decoration: none;
+  color:white;
+  line-height: 36px;
+  padding-left: 10px;
+}
+
+/*set style for the level one menu*/
+.level_one_menu>li>a{
+  font-weight:400;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+}
+
+.level_one_menu>li>a:active{
+  background-color: #ed782a;
+}
+
+/*set padding for level two menu*/
+.level_two_menu>li{
+  padding-left: 24px;
+}
+
+.level_two_menu>li:active{
+  background-color: #1934a0;
+}
+
+/*hide the level two menu in default*/
+.level_two_menu{
+  display: none;
+}
+
+/*show the menu when click on it*/
+.show{
+  display: block;
+}
+
+
+@media only screen and (min-width:900px){
+  .navigation{
+    max-width: 1000px;
+  }
+
+/*change the flex direction*/
+  .level_one_menu{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+/*clear the menu padding*/
+  .level_one_menu a{
+    padding:0;
+  }
+
+/*clear the level two menu padding*/
+  .level_two_menu>li{
+    padding:0;
+  }
+
+}
